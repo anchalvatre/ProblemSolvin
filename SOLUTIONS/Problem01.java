@@ -1,22 +1,17 @@
+
 import java.util.Scanner;
 
-public class Problem01 {
-    public static void main(String[] args) {
-        String[] names = {"Bhin Bhin", "Atung", "Kaka", "Hodori", "Pan Pan", "Appu", "Lulu", "Orry", "Mei Mei"};
-        Scanner scanner = new Scanner(System.in);
-        try {
-            int index = Integer.parseInt(scanner.nextLine());
-            if (index > 9) {
-                if (index % 9 == 0) {
-                    index = 9;
-                } else {
-                    index = index % 9;
-                }
-            }
-            index -= 1;
-            System.out.println(names[index]);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+ class Problem01 {    
+public static void main(String[] args) {
+   Scanner sc =new Scanner(System.in);
+   int n = sc.nextInt(),k=sc.nextInt();
+   String a[]=new String [n];
+   for(int i=0;i<n;i++)
+       a[i]=sc.next();
+ if(k%n==0)
+        System.out.println(a[n-1]);
+ else
+        System.out.println(a[(k%n)-1]);
+   
 }
+ }
